@@ -11,7 +11,7 @@ Download the datasets here:
 [CVC-ClinicDB](https://www.kaggle.com/datasets/balraj98/cvcclinicdb)
 and put them into data directory.
 
-1.) make directory named "dataset/"datasetname"
+1.) make directory named "dataset/'datasetname'"
 
 2.) make three sub-directories "train" "val" "test"
 
@@ -19,7 +19,7 @@ and put them into data directory.
 
 4.) Put masks under directory named "masks"
 
-## 2. Download the models (loading models):
+## 2. Download the pretrained models:
 
 * [models](https://pan.baidu.com/s/1rcXsAPTR67l9U5ZashbiFA) code: 48l2
 
