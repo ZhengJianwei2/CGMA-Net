@@ -11,7 +11,7 @@ Download the datasets here:
 [CVC-ClinicDB](https://www.kaggle.com/datasets/balraj98/cvcclinicdb)
 and put them into data directory.
 
-1.) make directory named "data/kdsb"
+1.) make directory named "dataset/"datasetname"
 
 2.) make three sub-directories "train" "val" "test"
 
