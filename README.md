@@ -21,7 +21,7 @@ and put them into data directory.
 
 ## 2. Download the models (loading models):
 
-* [models](https://pan.baidu.com/s/1m2vDFG8-FOCYdeidLeYOsA) code: x1qk
+* [models](https://pan.baidu.com/s/1N73_JleTnYoPVq9YZiTzoQ) code: nh6a
 
 and put them into checkpoints directory.
 
