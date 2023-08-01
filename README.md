@@ -9,6 +9,7 @@ Download the datasets here:
 [Kvasir-SEG](https://www.kaggle.com/datasets/debeshjha1/kvasirseg)
 * CVC-ClinicDB:
 [CVC-ClinicDB](https://www.kaggle.com/datasets/balraj98/cvcclinicdb)
+
 and put them into data directory.
 
 1.) make directory named "dataset/'datasetname'"
