@@ -46,7 +46,7 @@ And the pretrained models of CGMA-Net on two ployp datasets are as follows:
 
 * [models](https://pan.baidu.com/s/1rcXsAPTR67l9U5ZashbiFA) code: 48l2
 
-* and put them into checkpoints directory.
+please download and put them into checkpoints directory.
 
 ## 4. Train
 ```cmd
