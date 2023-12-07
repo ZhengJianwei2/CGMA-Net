@@ -7,12 +7,12 @@ This code has been tested on on the workstation with NVIDIA RTX 3090 GPU with 24
 
     pip install -r requirements.txt
 ## 2. Download the datesets:
-Download the datasets here:
+Download the datasets here and put them into data directory:
 * Kvasir-SEG:
 [Kvasir-SEG](https://www.kaggle.com/datasets/debeshjha1/kvasirseg)
 * CVC-ClinicDB:
 [CVC-ClinicDB](https://www.kaggle.com/datasets/balraj98/cvcclinicdb)
-*and put them into data directory.
+
 
 1.) make directory named "dataset/'datasetname'"
 
