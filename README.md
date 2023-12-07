@@ -12,7 +12,7 @@ Download the datasets here:
 [Kvasir-SEG](https://www.kaggle.com/datasets/debeshjha1/kvasirseg)
 * CVC-ClinicDB:
 [CVC-ClinicDB](https://www.kaggle.com/datasets/balraj98/cvcclinicdb)
-and put them into data directory.
+*and put them into data directory.
 
 1.) make directory named "dataset/'datasetname'"
 
@@ -23,6 +23,7 @@ and put them into data directory.
 4.) Put masks under directory named "masks"
 
 Below is an example:
+```
 ├─dataset
     ├─kvasir-seg
         ├─train
@@ -34,7 +35,7 @@ Below is an example:
         └─test
             ├─images
             ├─masks
-
+```
 ## 3. Download the models (loading models):
 
 Download the pretrained 'PVTv2' model and put it into `lib/bkbone` directory.
@@ -60,7 +61,7 @@ train_path=dataset/{your_dataset_name}/train
 test_path=dataset/{your_dataset_name}
 train_save=checkpoint/{your_dataset_name}
 Below is an example:
-python lib/train.py --train_path dataset/kvasir-seg/train --test_path dataset/kvasir-seg --train_save checkpoint/kvasir-seg/CGMA.pth
+python lib/train.py --train_path dataset/kvasir-seg/train --test_path dataset/kvasir-seg --train_save checkpoint/kvasir-seg
 ```
     
     
@@ -71,4 +72,4 @@ model_path=dataset/{your_dataset_name}/{your_model_name}
 Below is an example:
 python lib/train.py --test_path dataset/kvasir-seg/test --model_path checkpoint/kvasir-seg/CGMA.pth
 ```
-
+    
