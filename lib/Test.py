@@ -129,55 +129,22 @@ def inference(model, args, save_path=None):
         gts.append(gt)
         prs.append(pr)
         names.append(_)
-
     get_scores(gts, prs, names)
-
-    # if save_path:
-    #     if not os.path.exists(save_path):
-    #         os.makedirs(save_path)
-    #     for img, name in zip(prs, names):
-    #         save_name = save_path + '/' + name[0].split('\\')[-1]
-    #         img = img*255
-    #         cv2.imwrite(save_name, img)
-
 
 
 if __name__ == '__main__':
-    test_path = "../dataset/kvasir-seg/test"
-    # test_path = "../dataset/CVC-ClinicDB/test"
-    # test_path = "../dataset/CVC-ClinicDB"
-    # test_path = "../dataset/kvasir-seg"
     parser = argparse.ArgumentParser()
     parser.add_argument('--test_path', type=str,
-                        default=test_path, help='path to dataset')
+                        default='', help='path to dataset')
+    parser.add_argument('--model_path', type=str,
+                        default='', help='path to pretrained model')
     args = parser.parse_args()
 
-    model = PolypPVT()
-    model.load_state_dict(torch.load('./model/sg/sg_fff_kvasir_32.pth'))
+    model = CGMA()
+    model.load_state_dict(torch.load(args.model_path))
 
-    # model = UNet(3,1)
-    # model.load_state_dict(torch.load('./model/unet/kvasir.pth'))
-    # model = UNet()
-    # model.load_state_dict(torch.load('./model/unet_plus/clinic.pth'))
-    #
-    # model = EncoderBlock()
-    # model.load_state_dict(torch.load('./model/msrf/clinic.pth'))
-
-    #
-    # model = models.FCBFormer()
-    # model.load_state_dict(torch.load('./model/FCB/FCB_clinic_no_aug.pth'))
-    # model = build(model_name="mit_PLD_b4", class_num=1)  # ssformer
-    # model.load_state_dict(torch.load('./model/ssfomer/ssformer_l_clinic.pth'))
-    # model.load_state_dict(torch.load('./model/ssfomer/ssformer_clinic_no_aug.pth'))
-    # model = ESFPNetStructure()
-    # model.load_state_dict(torch.load('./model/ESFP/ESFP_L_kvasir.pth'))
-    # model = PraNet().cuda()
-    # model.load_state_dict(torch.load('./model/pranet/kvasir.pth'))
-
-    # model = HarDMSEG().cuda()
-    # model.load_state_dict(torch.load('./model/hard/kvasir.pth'))
 
     model.cuda()
     model.eval()
 
-    inference(model, args, 'result_map/hard/kvasir')
+    inference(model, args)
